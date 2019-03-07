@@ -10,7 +10,7 @@ function grabProject(context, next) {
   let bailed = false;
   context.emit('data', 'info', context.module.name + ' npm:',
       'Downloading project: ' + packageName);
-  const proc =
+  const proc = // lgtm [js/unused-local-variable]
     spawn(
       'npm',
       ['pack', packageName],
